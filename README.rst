@@ -1,9 +1,17 @@
 cmdstats
 ------------
 
-获取历史命令使用频率状态.
+查看你终端命令使用频率列表, 原理是通过宿主目录下的`.*_history`分析后得到历史命令使用频率状态， 并且进行排序输出.
 
 .. image:: https://github.com/jackeyGao/cmdstats/raw/master/screenCapture.jpg
+
+
+Install
+------------
+
+::
+
+    pip install git+https://github.com/jackeyGao/cmdstats.git
 
 Usage
 ------------
@@ -38,12 +46,6 @@ Usage
     25  26    0.36604%   mkvirtualenv
 
 
-Install
-------------
-
-::
-
-    pip install git+https://github.com/jackeyGao/cmdstats.git
 
 
 License
