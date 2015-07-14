@@ -3,7 +3,7 @@ cmdstats
 
 获取历史命令使用频率状态.
 
-![screenCapture](http://github.com/jackeyGao/cmdstats/raw/master/screenCapture.jpg)
+.. image:: https://github.com/jackeyGao/cmdstats/raw/master/screenCapture.jpg
 
 Usage
 ------------
@@ -42,6 +42,7 @@ Install
 ------------
 
 ::
+
     pip install git+https://github.com/jackeyGao/cmdstats.git
 
 
