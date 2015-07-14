@@ -1,14 +1,16 @@
-cmd_status
+cmdstats
 ------------
 
 获取历史命令使用频率状态.
+
+[screen](http://github.com/jackeyGao/cmdstats/raw/master/screenCapture.jpg)
 
 Usage
 ------------
 
 ::
 
-    $ cmd_status -l 25
+    $ cmdstats -l 25
     1   1919  27.01675%  vim
     2   1524  21.45572%  python
     3   797   11.22061%  ls
@@ -36,4 +38,35 @@ Usage
     25  26    0.36604%   mkvirtualenv
 
 
+Install
+------------
+
+::
+    pip install git+https://github.com/jackeyGao/cmdstats.git
+
+
+License
+------------
+
+The MIT License (MIT)
+
+Copyright (c) 2015 JackeyGao
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
