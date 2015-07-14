@@ -25,7 +25,7 @@ setup(
     include_package_data=True,
     entry_points={
         'console_scripts': [
-            'cmdstats = cmd_status.history:main',
+            'cmdstats = cmdstats:main',
         ]
     },
     classifiers=[
