@@ -3,7 +3,7 @@ cmdstats
 
 获取历史命令使用频率状态.
 
-[screen](http://github.com/jackeyGao/cmdstats/raw/master/screenCapture.jpg)
+![screenCapture](http://github.com/jackeyGao/cmdstats/raw/master/screenCapture.jpg)
 
 Usage
 ------------
