@@ -1,7 +1,11 @@
 cmdstats
 ------------
 
-查看你终端命令使用频率列表, 原理是通过宿主目录下的`.*_history`分析后得到历史命令使用频率状态， 并且进行排序输出.
+.. role:: bash(code)
+   :language: bash
+
+
+查看你终端命令使用频率列表, 原理是通过宿主目录下的 ``.*history`` 分析后得到历史命令使用频率状态， 并且进行排序输出.
 
 .. image:: https://github.com/jackeyGao/cmdstats/raw/master/screenCapture.jpg
 
