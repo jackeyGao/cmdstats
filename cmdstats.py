@@ -68,7 +68,7 @@ class ParseBashHistoryFile(ParseHistoryFile):
     
     def _parse_line(self, line):
         ob = {}
-        ob["command"] = line.strip()
+        ob["command"] = line.strip().split(' ')[0]
         return ob
 
 parses = [ParseZshHistoryFile, ParseBashHistoryFile]
