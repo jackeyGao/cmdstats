@@ -13,6 +13,8 @@ import sys
 import time
 import traceback
 
+reload(sys)
+sys.setdefaultencoding("utf-8")
 
 __version__ = '0.1'
 
@@ -36,7 +38,7 @@ class ParseHistoryFile(object):
         with open(self.filepath, 'r') as f:
             for line in f.readlines():
                 try:
-                    ob = self._parse_line(line.strip())
+                    ob = self._parse_line(line.strip().encode("utf-8"))
                     obs.append(ob)
                 except Exception as e:
                     continue
@@ -100,9 +102,8 @@ def show(data):
     #message = "No\tCount\tPercentage\tCommand\n"
     message = ""
     for n, c, b, cmd in data:
-        message += "%s\t%s\t%s%%\t%s\n" % (n, c, b, cmd)
-
-    return commands.getoutput("echo '%s' | column -t " % message)
+        message += "%s\t%s\t%s%%\t%s\n" % (n, c, b, cmd.__repr__().strip("'"))
+    return commands.getoutput("""echo "%s" | column -t """ % message)
 
 def main():
     parser = argparse.ArgumentParser()
@@ -128,3 +129,6 @@ def main():
 
     data = stats(obs, limit=limit)
     sys.stdout.write(show(data) + '\n')
+
+if __name__ == '__main__':
+    main()
