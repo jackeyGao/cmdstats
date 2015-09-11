@@ -6,6 +6,7 @@ mail: junqi.gao@shuyun.com
 Created Time: 2015年07月12日 星期日 20时45分02秒
 '''
 from __future__ import division
+import abc
 import commands
 import argparse
 import os
@@ -19,16 +20,18 @@ sys.setdefaultencoding("utf-8")
 __version__ = '0.1'
 
 class ParseHistoryFile(object):
+    __metaclass__ = abc.ABCMeta
 
     def __init__(self, filepath):
         self.filepath = filepath
 
+    @abc.abstractmethod
     def _parse_line(self, line):
-        ob = {}
-        return ob
+        """Return line object"""
 
+    @abc.abstractmethod
     def validate(self):
-        return True
+        """Return True if the filepath is valid."""
 
     def parse_lines(self):
         obs = []
@@ -99,7 +102,6 @@ def stats(obs, limit=20):
     return data
 
 def show(data):
-    #message = "No\tCount\tPercentage\tCommand\n"
     message = ""
     for n, c, b, cmd in data:
         message += "%s\t%s\t%s%%\t%s\n" % (n, c, b, cmd.__repr__().strip("'"))
@@ -115,7 +117,7 @@ def main():
     
     home_dir = os.environ.get("HOME", None)
     if home_dir is None:
-        print("No $HOME variable.")
+        raise Exception("No $HOME variable.")
 
     files = os.listdir(home_dir)
     
